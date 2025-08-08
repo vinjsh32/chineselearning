@@ -1,6 +1,6 @@
 # Chinese Learning
 
-Simple Node.js application skeleton to guide learners of Chinese. It exposes routes for grammar, reading, listening, writing, character practice, pinyin, and an AI tutor. The writing and tutor sections optionally integrate with a free Hugging Face model to suggest corrections and answer questions.
+Simple Node.js application skeleton to guide learners of Chinese. It serves a small frontend covering grammar, reading, listening, writing, character practice, pinyin, and an AI tutor. The writing and tutor sections optionally integrate with a free Hugging Face model to suggest corrections and answer questions.
 
 ## Usage
 
@@ -11,8 +11,9 @@ Simple Node.js application skeleton to guide learners of Chinese. It exposes rou
    npm start
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser and navigate through the sections.
-   - `/writing` accepts text and returns a corrected version.
-   - `/tutor` lets you ask questions; submit a prompt via the form and receive a model-generated reply.
+   - Grammar, reading, listening, character practice, and pinyin offer simple interactive exercises.
+   - Writing accepts text and returns a corrected version.
+   - Tutor lets you ask questions and receive a model-generated reply.
 
 ## Development Notes
 

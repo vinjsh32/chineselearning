@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Listening</title>
+</head>
+<body>
+<h1>Listening</h1>
+<p>Click play and type what you hear in English.</p>
+<button id="play">Play</button>
+<input id="answer" type="text" />
+<button id="check">Check</button>
+<p id="feedback"></p>
+<script>
+document.getElementById('play').addEventListener('click', () => {
+  const utter = new SpeechSynthesisUtterance('你好');
+  utter.lang = 'zh-CN';
+  speechSynthesis.speak(utter);
+});
+
+document.getElementById('check').addEventListener('click', () => {
+  const ans = document.getElementById('answer').value.trim().toLowerCase();
+  document.getElementById('feedback').textContent = ans === 'hello' ? 'Correct!' : 'It means: Hello.';
+});
+</script>
+</body>
+</html>

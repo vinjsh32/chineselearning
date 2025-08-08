@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reading</title>
+</head>
+<body>
+<h1>Reading</h1>
+<p id="passage">他喜欢喝茶。</p>
+<p>What does this sentence mean?</p>
+<input id="answer" type="text" />
+<button id="check">Check</button>
+<p id="feedback"></p>
+<script>
+document.getElementById('check').addEventListener('click', () => {
+  const user = document.getElementById('answer').value.trim().toLowerCase();
+  const correct = 'he likes to drink tea';
+  document.getElementById('feedback').textContent = user === correct ? 'Correct!' : 'It means: "He likes to drink tea."';
+});
+</script>
+</body>
+</html>

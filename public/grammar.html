@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grammar</title>
+</head>
+<body>
+<h1>Grammar</h1>
+<p>Basic word order in Chinese is: Subject + Verb + Object.</p>
+<p>Which sentence follows this order?</p>
+<button data-answer="correct">我爱你</button>
+<button data-answer="wrong">爱我你</button>
+<p id="feedback"></p>
+<script>
+const buttons = document.querySelectorAll('button[data-answer]');
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('feedback').textContent = btn.dataset.answer === 'correct' ? 'Correct!' : 'Try again.';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pinyin</title>
+</head>
+<body>
+<h1>Pinyin Practice</h1>
+<p>Type the pinyin for the character 我:</p>
+<input id="answer" type="text" />
+<button id="check">Check</button>
+<p id="feedback"></p>
+<script>
+document.getElementById('check').addEventListener('click', () => {
+  const ans = document.getElementById('answer').value.trim().toLowerCase();
+  document.getElementById('feedback').textContent = ans === 'wo3' || ans === 'wo' ? 'Correct!' : 'It is "wo" (third tone).';
+});
+</script>
+</body>
+</html>

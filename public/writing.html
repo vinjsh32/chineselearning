@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Writing</title>
+</head>
+<body>
+<h1>Writing Practice</h1>
+<textarea id="text" rows="4" cols="50"></textarea><br/>
+<button id="submit">Submit</button>
+<pre id="result"></pre>
+<script>
+document.getElementById('submit').addEventListener('click', async () => {
+  const text = document.getElementById('text').value;
+  const res = await fetch('/writing', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text })
+  });
+  const data = await res.json();
+  document.getElementById('result').textContent = data.corrected + (data.note ? '\n' + data.note : '');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Tutor</title>
+</head>
+<body>
+<h1>AI Tutor</h1>
+<input type="text" id="question" style="width:300px" />
+<button id="ask">Ask</button>
+<pre id="answer"></pre>
+<script>
+document.getElementById('ask').addEventListener('click', async () => {
+  const question = document.getElementById('question').value;
+  const res = await fetch('/tutor', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question })
+  });
+  const data = await res.json();
+  document.getElementById('answer').textContent = data.answer;
+});
+</script>
+</body>
+</html>
