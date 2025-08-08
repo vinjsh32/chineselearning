@@ -1,0 +1,14 @@
+{
+  "name": "chineselearning",
+  "version": "1.0.0",
+  "description": "Simple web app skeleton for Chinese learning with AI corrections.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
